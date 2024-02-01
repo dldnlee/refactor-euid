@@ -15,7 +15,7 @@ function SearchBar() {
 }
 
 function Category(props) {
-  const {selected, setSelected} = useContext(SelectedContext); // just call this to any function when i want to use the selected value
+  const {selected, setSelected, handleData} = useContext(SelectedContext); // just call this to any function when i want to use the selected value
 
   const active = {
     'borderBottom' : '1px',
@@ -28,7 +28,10 @@ function Category(props) {
       type="button" 
       className="w-full text-gray-400 py-1 active:text-background"
       style={selected === props.index ? active : {}}
-      onClick={() => setSelected(props.index)}>{props.text}</button>
+      onClick={() => {
+        setSelected(props.index)
+        handleData();
+      }}>{props.text}</button>
     </li>
   )
 }
