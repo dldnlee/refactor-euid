@@ -1,4 +1,6 @@
-import Board from "./pages/board/Board.js";
+import Board from "./pages/board/Board.jsx";
+
+
 
 
 
