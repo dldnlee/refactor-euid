@@ -1,5 +1,5 @@
 import search from '../assets/icons/search.svg';
-import { useContext } from 'react';
+import { useContext} from 'react';
 import { SelectedContext } from '../pages/board/Board';
 
 
@@ -15,7 +15,7 @@ function SearchBar() {
 }
 
 function Category(props) {
-  const {selected, setSelected, handleData} = useContext(SelectedContext); // just call this to any function when i want to use the selected value
+  const {selected, setSelected} = useContext(SelectedContext); // just call this to any function when i want to use the selected value
 
   const active = {
     'borderBottom' : '1px',
@@ -30,7 +30,6 @@ function Category(props) {
       style={selected === props.index ? active : {}}
       onClick={() => {
         setSelected(props.index)
-        handleData();
       }}>{props.text}</button>
     </li>
   )
