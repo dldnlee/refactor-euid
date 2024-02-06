@@ -26,11 +26,7 @@ export const useFilterCategory = () => {
     } else {
       setData([]);
     }
-    console.log('hello new world');
-
-    return () => {
-      console.log('destroying myself for a better world'); // example removing a timeout
-    }
+    
   }, [selected])
 
   return {selected, setSelected, data, setData};

@@ -1,8 +1,6 @@
 import BoardTopBar from "../../components/BoardTopBar";
 import BoardPosts from "../../components/BoardPosts";
-import { createContext, useState, useEffect } from "react";
-// import boardData from '../../data/board.json';
-// import useFilterCategory from '../../components/useFilterCategory';
+import { createContext } from "react";
 import { useFilterCategory } from "../../components/useFilterCategory";
 
 export const SelectedContext = createContext(null); // exporting the value

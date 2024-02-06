@@ -6,10 +6,10 @@ import { SelectedContext } from '../pages/board/Board';
 
 function SearchBar() {
   return (
-    <form className="flex py-2 px-3 bg-primary">
+    <form className="flex py-3 px-3 bg-primary">
       <label htmlFor="search-field" className="sr-only">검색</label>
-      <input type="text" id="search-field" className='w-full px-2 py-1 rounded-md text-sm' placeholder='검색'/>
-      <button className='px-1'><img src={search} alt="돋보기" /></button>
+      <input type="text" id="search-field" className='w-full px-2 py-2 rounded-md text-sm' placeholder='검색'/>
+      <button className='ps-2'><img src={search} alt="돋보기" /></button>
     </form>
   )
 }
@@ -18,7 +18,7 @@ function Category(props) {
   const {selected, setSelected} = useContext(SelectedContext); // just call this to any function when i want to use the selected value
 
   const active = {
-    'borderBottom' : '1px',
+    'borderTop' : '1px solid white',
     'color' : 'white'
   }
 
@@ -26,7 +26,7 @@ function Category(props) {
     <li className="w-full text-xs">
       <button 
       type="button" 
-      className="w-full text-gray-400 py-1 active:text-background"
+      className="w-full text-gray-400 py-3 active:text-background"
       style={selected === props.index ? active : {}}
       onClick={() => {
         setSelected(props.index)
@@ -49,12 +49,11 @@ function CategoryBar() {
 }
 
 
-
 export default function BoardTopBar() {
   return (
-    <>
+    <div className='sticky top-0'>
       <SearchBar />
       <CategoryBar/>
-    </>
+    </div>
   )
 }
