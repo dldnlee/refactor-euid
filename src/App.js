@@ -1,12 +1,23 @@
-import Board from "./pages/board/Board.jsx";
+import Board from "./pages/Board";
+import Main from "./pages/Main";
+import NavBar from "./NavBar";
+import NoPage from "./pages/NoPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 
 function App() {
   return (
-    <div className="App max-w-[500px] mx-auto">
-      <Board />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<NavBar />}>
+          <Route index element={<Main />} />
+          <Route path="board" element={<Board />} />
+          
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

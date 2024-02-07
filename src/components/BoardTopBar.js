@@ -1,6 +1,6 @@
 import search from '../assets/icons/search.svg';
 import { useContext} from 'react';
-import { SelectedContext } from '../pages/board/Board';
+import { SelectedContext } from '../pages/Board';
 
 
 

@@ -9,6 +9,7 @@ export const useFilterCategory = () => {
       if(item.category === option) {
         return item;
       }
+      
     })
     return filteredData;
   }

@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { SelectedContext } from "../pages/board/Board"
+import { SelectedContext } from "../pages/Board"
 
 
 function Badge({category}) {
